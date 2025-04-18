@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+ 
+  /*dark mode*/
+
+  body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  /*--------------------------*/
+
+  .app-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    transition: 0.3s ease;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .filters {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .filters button {
+    margin: 0 5px;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+  }
+
+  .todo-item.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  .auth-form {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .auth-form input {
+    font-size: 16px;
+  }
+
+  /* Fade-in animasyonu */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnim 1s ease forwards;
+  }
+  
+  @keyframes fadeInAnim {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Toast mesaj kutusu */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .toast.error {
+    background-color: #e74c3c;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  
+  /*dark mode*/
+    
+  body.dark .app-container {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark button {
+    background-color: #2e2e2e;
+  }
+
+  body.dark button:hover {
+    background-color: #007bff;
+  }
+
+  body.dark .auth-form {
+    background-color: #2e2e2e;
+  }
+    
+  body.dark .todo-item {
+    background-color: #2a2a2a;
+  }
+    
+  body.dark .filters button{
+    background-color: #2c2c2c;
+    color: #e0e0e0; 
+  }
+    
+  body.dark input {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #555;;
+  }
+  
