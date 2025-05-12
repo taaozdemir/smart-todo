@@ -120,10 +120,25 @@ function App() {
   <div className={user ? "fade-in" : "fade-out"}>
     <TodoForm addTodo={addTodo} />
     <div className="filters">
-      <button onClick={() => setFilter("all")}>Hepsi</button>
-      <button onClick={() => setFilter("active")}>Aktif</button>
-      <button onClick={() => setFilter("completed")}>Tamamlanan</button>
-    </div>
+      <button
+      className={filter === "all" ? "filter-button active" : "filter-button"}
+      onClick={() => setFilter("all")}
+      >
+      Hepsi
+      </button>
+      <button
+       className={filter === "active" ? "filter-button active" : "filter-button"}
+       onClick={() => setFilter("active")}
+       >
+       Aktif
+      </button>
+      <button
+       className={filter === "completed" ? "filter-button active" : "filter-button"}
+       onClick={() => setFilter("completed")}
+       >
+      Tamamlanan
+      </button>
+     </div>
     <TodoList todos={filteredTodos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
   </div>
 ) : (

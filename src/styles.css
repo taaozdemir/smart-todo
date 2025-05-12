@@ -43,8 +43,17 @@ h1 {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  
 }
 
+.todo-input {
+  width: 100% !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  margin: 0 auto;
+  display: block;
+
+}
 .todo-form select {
   padding: 10px;
   border-radius: 8px;
@@ -144,9 +153,12 @@ body button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .filters button {
+  flex: 1;
   background-color: transparent;
   border: 1px solid #ccc;
   padding: 6px 12px;
@@ -157,6 +169,11 @@ body button {
 
 .filters button:hover {
   background-color: #007bff;
+  color: white;
+}
+
+.filter-button.active {
+  background-color: #388e3c; 
   color: white;
 }
 
@@ -214,6 +231,11 @@ body button {
   background-color: #d32f2f;
 }
 
+.error-text {
+  color: f44336;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -224,6 +246,7 @@ body button {
   opacity: 1;
   animation: fadeOutSlide 0.3s ease forwards;
 }
+
 
 @keyframes fadeInSlide {
   to {
@@ -239,7 +262,7 @@ body button {
   }
 }
 
-/* Dark mode styles */
+/* ------Dark mode styles------- */
 
 body.dark .app-container,
 .app-container.dark {
@@ -268,13 +291,49 @@ body.dark button:hover {
 }
 
 body.dark .todo-item {
-  background-color: #2a2a2a;
+  background-color: #666;
 }
 
 body.dark .todo-item button {
-  background-color: #444;
+  background-color: #666;
   color: white;
 }
 
+body.dark .todo-form select {
+  background-color: #666;
+}
 
+body.dark .todo-form input {
+  background-color: #666;
+  color: white;
+  border: 1px solid #888;
+}
+
+body.dark .todo-form input::placeholder {
+  color: #e2e2e2;
+}
+
+body.dark .todo-form select {
+  background-color: #666;
+  color: white;
+  border: 1px solid #888;
+}
+
+body.dark .filters button {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+body.dark .filters button:hover {
+  background-color: #007bff;
+}
 /*------------------------*/
+body.dark .filter-button.active {
+  background-color: #133014;
+  color: #f1f1f1;
+}
