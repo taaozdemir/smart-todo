@@ -24,7 +24,7 @@ Bu uygulama, React ve Firebase kullanılarak geliştirilmiş bir görev takip si
 ![Ekran Görüntüsü](3.png)
 
 ## 🔗 Canlı Demo
-https://smart-todo-app.netlify.app (örnek)
+https://smart-to-do-app-to.netlify.app
 
 ## 📁 Kurulum
 ```bash
