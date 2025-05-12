@@ -1,3 +1,8 @@
+
+
+
+v1.0.0
+
 # Smart To-Do App 📝
 
 Bu uygulama, React ve Firebase kullanılarak geliştirilmiş bir görev takip sistemidir. Kullanıcılar giriş yaparak kendi görevlerini ekleyebilir, filtreleyebilir, tamamlayabilir ve silebilir.
@@ -16,13 +21,13 @@ Bu uygulama, React ve Firebase kullanılarak geliştirilmiş bir görev takip si
 - CSS
 
 ## 📸 Görseller
-![Ekran Görüntüsü](./screenshots/home.png)
+![Ekran Görüntüsü](3.png)
 
 ## 🔗 Canlı Demo
 https://smart-todo-app.netlify.app (örnek)
 
 ## 📁 Kurulum
 ```bash
-git clone https://github.com/taaozdemir/smart-todo-app.git
+git clone https://github.com/taaozdemir/smart-todo.git
 npm install
 npm start
