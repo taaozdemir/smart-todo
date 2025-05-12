@@ -20,6 +20,9 @@ export const deleteTodoFromFirestore = async (id) => {
 };
 
 export const toggleCompleteFirestore = async (id, newValue) => {
+  if (typeof newValue !== "boolean") {
+    throw new Error("completed değeri boolean olmalı");
+  }
   await updateDoc(doc(db, "todos", id), {
     completed: newValue
   });

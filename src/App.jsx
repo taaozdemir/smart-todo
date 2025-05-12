@@ -57,11 +57,20 @@ function App() {
 
   //Firestore
   const toggleComplete = async (id) => {
-    await toggleCompleteFirestore(id);
-    setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  const todo = todos.find(t => t.id === id);
+  if (!todo) return; // id eşleşmiyorsa işlem yapma
+
+  const newCompleted = !todo.completed;
+
+  try {
+    await toggleCompleteFirestore(id, newCompleted); // Firestore'a doğru değer gönder
+    setTodos(todos.map(t =>
+      t.id === id ? { ...t, completed: newCompleted } : t
     ));
-  };
+  } catch (err) {
+    console.error("toggleComplete hatası:", err);
+  }
+};
 
   //firestore silme
   const deleteTodo = async (id) => {

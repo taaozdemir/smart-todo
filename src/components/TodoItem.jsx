@@ -15,16 +15,6 @@ function TodoItem({ todo, id, toggleComplete, deleteTodo }) {
         <div>
           <small>
             Öncelik: 
-            <span style={{
-              backgroundColor: priorityColors[todo.priority],
-              color: 'white',
-              padding: '2px 6px',
-              marginLeft: '6px',
-              borderRadius: '4px',
-              fontSize: '0.8em'
-            }}>
-              {todo.priority}
-            </span>
             <span className={`priority-label ${
                todo.priority === "Yüksek" ? "priority-high" :
                todo.priority === "Orta" ? "priority-medium" :
